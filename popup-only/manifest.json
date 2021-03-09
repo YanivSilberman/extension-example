@@ -1,0 +1,13 @@
+{
+  "version": "0.1",
+  "manifest_version": 3,
+  "name": "Your official app name",
+  "short_name": "My awesome extension",
+  "description": "My awesome extension",
+  "icons": {
+    "128": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

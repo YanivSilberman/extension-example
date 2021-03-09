@@ -1,18 +1,19 @@
 {
-  "version": 0.1,
-  "manifest_version": 2,
+  "version": "0.1",
+  "manifest_version": 3,
   "name": "Your official app name",
   "short_name": "Learn French and Spanish while surfing the web",
   "description": "Learn French and Spanish while surfing the web",
   "permissions": [
-    "activeTab",
-    "https://*/*"
+    "activeTab"
   ],
   "icons": {
     "128": "icon.png"
   },
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  }
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "https://*/*"
+  ]
 }

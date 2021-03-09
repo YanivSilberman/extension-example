@@ -1,9 +1,7 @@
-import { browser } from 'webextension-polyfill-ts';
-
 /**
  * Listen to messages from background script
  */
-browser.runtime.onMessage.addListener(async (request) => {
+chrome.runtime.onMessage.addListener(async (request) => {
   if (!('action' in request)) {
     return;
   }
@@ -29,8 +27,10 @@ browser.runtime.onMessage.addListener(async (request) => {
   // iterate elements with tree walker taking all the nodes and text you need
 
   // send them to the backend
-  browser.runtime.sendMessage({
+  chrome.runtime.sendMessage({
     action: 'page-content',
     // add any arguments you want
   });
 })();
+
+alert('test')
